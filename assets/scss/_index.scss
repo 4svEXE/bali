@@ -1,10 +1,10 @@
+@use "tailwind" as *;
 @use "variables" as *;
 @use "wrappers" as *;
 @use "mixins" as *;
 @use "typography" as *;
 @use "buttons" as *;
 @use "forms" as *;
-// @use "tailwind" as *;
 
 * {
   margin: 0;
