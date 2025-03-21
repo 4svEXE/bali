@@ -1,0 +1,37 @@
+<div class="container sand h-screen py-2">
+
+  <h2>Це для тебе якщо:</h2>
+  <section class="py-10">
+    <swiper-container
+      [effect]="swiperConfig.effect"
+      [grabCursor]="swiperConfig.grabCursor"
+      [centeredSlides]="swiperConfig.centeredSlides"
+      [slidesPerView]="swiperConfig.slidesPerView"
+      [loop]="swiperConfig.loop"
+      [slideToClickedSlide]="swiperConfig.slideToClickedSlide"
+      [coverflowEffect]="swiperConfig.coverflowEffect"
+      class="swiperContainer"
+      [modules]="swiperConfig.modules"
+      [navigation]="true"
+    >
+      <swiper-slide class="tranding-slide">1
+        <img src="./assets/img/hero-bg.jpg" alt="" />
+      </swiper-slide>
+      <swiper-slide class="tranding-slide">2
+        <img src="./assets/img/hero-bg.jpg" alt="" />
+      </swiper-slide>
+      <swiper-slide class="tranding-slide">3
+        <img src="./assets/img/hero-bg.jpg" alt="" />
+      </swiper-slide>
+      <swiper-slide class="tranding-slide">4
+        <img src="./assets/img/hero-bg.jpg" alt="" />
+      </swiper-slide>
+    </swiper-container>
+  </section>
+</div>
+
+<app-how-it-works />
+
+<app-reviews />
+
+<app-review-form />
