@@ -1,15 +1,12 @@
 @use "mixins"as *;
 
 .button-primary {
-  // @include button(var(--primary-color), #fff);
-
   background-color: #488AD2;
   color: white;
   padding: 16px 38px ;
   border: none;
   border-radius: 16px;
   width: 100%;
-  // margin-top: 16px;
   cursor: pointer;
 
   display: flex;
