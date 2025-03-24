@@ -17,6 +17,14 @@ body {
   font-family: "Roboto", sans-serif;
   background-color: var(--bg-color);
   color: var(--text-color);
+
+}
+
+.root{
   width: 100vw;
   overflow-x: hidden;
+
+  h2{
+    font-size: 36px;
+  }
 }
