@@ -1,18 +1,98 @@
-.sand{
+.sand {
   background-color: #E6C39E;
 }
-.h-screen{
+
+.sky {
+  background-color: #335183;
+}
+.z-4{
+  z-index: 4;
+}
+.h-screen {
   height: 100vh;
 }
+
+
+
+
+.its-for-you {
+  position: relative;
+
+  .cloud {
+    position: absolute;
+    max-width: 200%;
+    left: -50%;
+    bottom: -20%;
+  }
+
+  .tranding-slide {
+
+    img,
+    video {
+      height: 500px;
+    }
+  }
+
+  .text{
+    width: 290px;
+    height: 200px;
+    background-color: #000000c0;
+    color: #fff;
+    transform: translateY(-200px);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+}
+
+
+.retryt-program {
+  position: relative;
+
+  background-image: url('/assets/img/retryt-program.png');
+
+
+  .sky-gradient {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+
+  .accordion-container {
+    padding: 20px;
+  }
+
+  .accordion-header {
+    cursor: pointer;
+  }
+
+  .accordion-item {
+    margin-bottom: 15px;
+    border: 1px solid #e0e0e0;
+  }
+
+  .accordion-content {
+    padding: 10px;
+  }
+
+}
+
+
+
 
 swiper-slide {
   height: 400px;
 
-  img{
+  img {
     width: 290px;
 
   }
 }
+
 
 .tranding-slider-control {
   width: 80px;
@@ -37,9 +117,11 @@ swiper-slide {
 
 .swiper-button-prev::after,
 .swiper-button-next::after {
-  font-size: 10px; /* Розмір стрілок */
+  font-size: 10px;
+  /* Розмір стрілок */
   font-weight: bold;
-  color: #000; /* Колір стрілок */
+  color: #000;
+  /* Колір стрілок */
 }
 
 .tranding-slider-control .slider-arrow {
@@ -60,8 +142,6 @@ swiper-slide {
 }
 
 .tranding-slide {
-  // width: 37rem;
-  // height: 42rem;
   height: max-content;
   position: relative;
 }
@@ -156,9 +236,7 @@ swiper-slide {
   filter: drop-shadow(0px 8px 24px rgba(18, 28, 53, 0.1));
 }
 
-.tranding-slider-control
-  .swiper-pagination
-  .swiper-pagination-bullet-active {
+.tranding-slider-control .swiper-pagination .swiper-pagination-bullet-active {
   background: var(--primary);
 }
 
@@ -185,7 +263,8 @@ swiper-slide {
   justify-content: center;
   margin-top: 10px;
   position: relative;
-  bottom: 10px; /* Відступ знизу */
+  bottom: 10px;
+  /* Відступ знизу */
 }
 
 @media (max-width: 700px) {
@@ -193,16 +272,19 @@ swiper-slide {
     width: 320px;
     height: 320px;
   }
+
   .swiper-slide-active {
     width: 350px;
     height: 350px;
   }
 }
+
 @media (max-width: 600px) {
   .swiper-slide {
     width: 300px;
     height: 300px;
   }
+
   .swiper-slide-active {
     width: 310px;
     height: 310px;
@@ -216,11 +298,13 @@ swiper-slide {
     padding: 0px;
   }
 }
+
 @media (max-width: 500px) {
   .swiper-slide {
     width: 250px;
     height: 250px;
   }
+
   .swiper-slide-active {
     width: 270px;
     height: 270px;

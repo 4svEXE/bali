@@ -1,6 +1,5 @@
-<div class="container sand h-screen py-2">
-
-  <h2>Це для тебе якщо:</h2>
+<div class="its-for-you container sand h-screen py-2">
+  <h2 class="mt-5">Це для тебе якщо:</h2>
   <section class="py-10">
     <swiper-container
       [effect]="swiperConfig.effect"
@@ -12,26 +11,170 @@
       [coverflowEffect]="swiperConfig.coverflowEffect"
       class="swiperContainer"
       [modules]="swiperConfig.modules"
-      [navigation]="true"
+      [navigation]="false"
     >
-      <swiper-slide class="tranding-slide">1
+    <swiper-slide *ngFor="let slide of slides" class="tranding-slide">
+
+      <img *ngIf="slide.img" [src]="slide.img" alt="" />
+      <video *ngIf="slide.video" [src]="slide.video" controls></video>
+
+      <div class="text">
+        {{ slide.text }}
+      </div>
+    </swiper-slide>
+    </swiper-container>
+  </section>
+
+  <img src="./assets/img/cloud.png" class="cloud" />
+</div>
+
+<div class="whats-be container sky pb-2 pt-40">
+  <h2>Програма ретриту:</h2>
+  <div class="flex flex-col gap-1">
+    <div *ngFor="let day of days" class="accordion-item border rounded-lg">
+      <button
+        (click)="toggleAccordion(day)"
+        class="accordion-header w-full text-left p-4 font-semibold bg-gray-100"
+      >
+        {{ day.title }}
+      </button>
+      <div *ngIf="day.isOpen" class="accordion-content p-4 border-t bg-white">
+        <ul class="list-disc list-inside space-y-2">
+          <li *ngFor="let item of day.content">{{ item }}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section class="py-16 px-4 sand">
+  <div class="max-w-6xl mx-auto text-center">
+    <h2 class="text-3xl md:text-4xl font-bold text-sky mb-10">Що на тебе чекає?</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2">
+      <div class="p-6 bg-white shadow-lg rounded-2xl text-center hover:scale-105 transition transform">
+        <h3 class="text-xl font-semibold text-sky">Трансформаційні практики</h3>
+        <p class="mt-2 text-gray-700">Йога, медитації, психологічні розстановки та енергетичні сесії.</p>
+      </div>
+      <div class="p-6 bg-white shadow-lg rounded-2xl text-center hover:scale-105 transition transform">
+        <h3 class="text-xl font-semibold text-sky">Місця сили</h3>
+        <p class="mt-2 text-gray-700">Океан, храми, джунглі, рисові тераси та священні джерела Балі.</p>
+      </div>
+      <div class="p-6 bg-white shadow-lg rounded-2xl text-center hover:scale-105 transition transform">
+        <h3 class="text-xl font-semibold text-sky">Перезавантаження тіла</h3>
+        <p class="mt-2 text-gray-700">Масажі, ритуали очищення, SPA.</p>
+      </div>
+      <div class="p-6 bg-white shadow-lg rounded-2xl text-center hover:scale-105 transition transform">
+        <h3 class="text-xl font-semibold text-sky">Натхнення та свобода</h3>
+        <p class="mt-2 text-gray-700">Відпочинок на найкращих пляжах, прогулянки та фотосесії.</p>
+      </div>
+      <div class="p-6 bg-white shadow-lg rounded-2xl text-center hover:scale-105 transition transform">
+        <h3 class="text-xl font-semibold text-sky">Смачне життя</h3>
+        <p class="mt-2 text-gray-700">Екзотичні фрукти, вечеря з морепродуктами на заході сонця, атмосферні ресторани.</p>
+      </div>
+      <div class="p-6 bg-white shadow-lg rounded-2xl text-center hover:scale-105 transition transform">
+        <h3 class="text-xl font-semibold text-sky">Нові знайомства</h3>
+        <p class="mt-2 text-gray-700">Коло однодумців, з якими можна поділитися досвідом і зарядитися енергією.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- <div class="retryt-program container sky h-screen pb-2 pt-10">
+  <h2 class="block relative z-4 m-auto">Що тебе чекає:</h2>
+
+  <img src="./assets/img/sky-gradient.png" class="sky-gradient z-1" />
+  <div class="accordion-container">
+    <section class="py-10">
+      <swiper-container
+        [effect]="swiperConfig.effect"
+        [grabCursor]="swiperConfig.grabCursor"
+        [centeredSlides]="swiperConfig.centeredSlides"
+        [slidesPerView]="swiperConfig.slidesPerView"
+        [loop]="swiperConfig.loop"
+        [slideToClickedSlide]="swiperConfig.slideToClickedSlide"
+        [coverflowEffect]="swiperConfig.coverflowEffect"
+        class="swiperContainer"
+        [modules]="swiperConfig.modules"
+        [navigation]="false"
+      >
+        <swiper-slide class="tranding-slide">
+          <p>hakuna matata</p>
+          <img src="./assets/img/hero-bg.jpg" alt="" />
+        </swiper-slide>
+        <swiper-slide class="tranding-slide"
+          >2
+          <img src="./assets/img/hero-bg.jpg" alt="" />
+        </swiper-slide>
+        <swiper-slide class="tranding-slide"
+          >3
+          <img src="./assets/img/hero-bg.jpg" alt="" />
+        </swiper-slide>
+        <swiper-slide class="tranding-slide"
+          >4
+          <img src="./assets/img/hero-bg.jpg" alt="" />
+        </swiper-slide>
+      </swiper-container>
+    </section>
+  </div>
+</div> -->
+
+<div class="its-for-you container sky h-screen py-2">
+  <h2>де будемо жити:</h2>
+
+  <section class="py-10">
+    <swiper-container
+      [effect]="swiperConfig.effect"
+      [grabCursor]="swiperConfig.grabCursor"
+      [centeredSlides]="swiperConfig.centeredSlides"
+      [slidesPerView]="swiperConfig.slidesPerView"
+      [loop]="swiperConfig.loop"
+      [slideToClickedSlide]="swiperConfig.slideToClickedSlide"
+      [coverflowEffect]="swiperConfig.coverflowEffect"
+      class="swiperContainer"
+      [modules]="swiperConfig.modules"
+      [navigation]="false"
+    >
+      <swiper-slide class="tranding-slide"
+        >1
         <img src="./assets/img/hero-bg.jpg" alt="" />
       </swiper-slide>
-      <swiper-slide class="tranding-slide">2
+      <swiper-slide class="tranding-slide"
+        >2
         <img src="./assets/img/hero-bg.jpg" alt="" />
       </swiper-slide>
-      <swiper-slide class="tranding-slide">3
+      <swiper-slide class="tranding-slide"
+        >3
         <img src="./assets/img/hero-bg.jpg" alt="" />
       </swiper-slide>
-      <swiper-slide class="tranding-slide">4
+      <swiper-slide class="tranding-slide"
+        >4
         <img src="./assets/img/hero-bg.jpg" alt="" />
       </swiper-slide>
     </swiper-container>
   </section>
+
+  <img src="./assets/img/cloud.png" class="cloud" />
 </div>
 
-<app-how-it-works />
+<div class="whats-be container sky pb-2 pt-40 py-6">
+  <h2>Часті питання:</h2>
+  <div class="flex flex-col gap-1">
+    <div *ngFor="let day of faq" class="accordion-item border rounded-lg">
+      <button
+        (click)="toggleAccordion(day)"
+        class="accordion-header w-full text-left p-4 font-semibold bg-gray-100"
+      >
+        {{ day.title }}
+      </button>
+      <div *ngIf="day.isOpen" class="accordion-content p-4 border-t bg-white">
+        <ul class="list-disc list-inside space-y-2">
+          <li *ngFor="let item of day.content">{{ item }}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<app-contact-form />
 
 <app-reviews />
-
-<app-review-form />
