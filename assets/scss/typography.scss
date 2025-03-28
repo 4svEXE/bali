@@ -44,22 +44,28 @@ h1 {
 }
 
 h2 {
+  margin-top: 24px;
   font-size: 58px;
   text-align: left;
   padding-bottom: 40px;
 
-  text-shadow: var(--box-shadow);
+  text-shadow: var(--box-shadow) !important;
   color: #fff;
   font-weight: bold;
+
+  font-family: var(--font-family-headings) !important;
 
 
   @media (max-width: $media-tablet) {
     display: inline-block;
     text-align: center;
-    font-size: 32px;
+    font-size: 38px !important;
+    font-weight: bold !important;
+
     padding-bottom: 20px;
     text-align: center;
     width: 100%;
+
   }
 }
 
