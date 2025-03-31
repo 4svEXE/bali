@@ -2,42 +2,80 @@ import { IReview } from './review.model';
 
 export const reviewsJSON: IReview[] = [
   {
-    id: '12',
-    photo: './assets/img/hero-bg.jpg',
-    name: 'John Doe',
-    text: 'This is an amazing product! I love it!',
+    id: '1',
+    photo: './assets/img/reviews/1.jpg',
+    name: 'Ольга П.',
+    text: 'Ретрит на Балі став для мене справжнім переродженням. Я навчилася відпускати стрес і знову відчувати радість життя.',
     rating: 5
   },
   {
-    id: '13',
-    photo: 'path/to/photo2.jpg',
-    name: 'Jane Smith',
-    text: 'Excellent quality and great service!',
-    rating: 3
+    id: '2',
+    photo: './assets/img/reviews/2.jpg',
+    name: 'Анна К.',
+    text: 'Це був найдушевніший досвід у моєму житті. Медитації на світанку та йога з видом на океан – просто незабутньо!',
+    rating: 5
   },
   {
-    id: '14',
-    photo: './assets/img/hero-bg.jpg',
-    name: 'Michael Johnson',
-    text: 'A must-have for anyone who enjoys interior design.',
-    rating: 1
+    id: '3',
+    photo: './assets/img/reviews/3.jpg',
+    name: 'Марія Л.',
+    text: 'Я навчилася слухати себе і відчувати гармонію. Ретрит допоміг мені прийняти важливі рішення.',
+    rating: 4
   },
   {
-    id: '15',
-    photo: 'path/to/photo1.jpg',
-    name: 'John Doe',
-    text: 'This is an amazing product! I love it!',
+    id: '4',
+    photo: './assets/img/reviews/4.jpg',
+    name: 'Світлана Р.',
+    text: 'Прекрасне місце, турботливі наставники та неймовірна енергія. Відчуття, що я знайшла нову сім’ю!',
+    rating: 5
   },
   {
-    id: '16',
-    photo: 'path/to/photo2.jpg',
-    name: 'Jane Smith',
-    text: 'Excellent quality and great service!',
+    id: '5',
+    photo: './assets/img/reviews/5.jpg',
+    name: 'Катерина Д.',
+    text: 'Думала, що не зможу розслабитися, але ретрит перевершив усі очікування. Повернулася додому іншою людиною!',
+    rating: 5
   },
   {
-    id: '17',
-    photo: 'path/to/photo3.jpg',
-    name: 'Michael Johnson',
-    text: 'A must-have for anyone who enjoys interior design.',
+    id: '6',
+    photo: './assets/img/reviews/6.jpg',
+    name: 'Юлія В.',
+    text: 'Я ніколи не була такою спокійною та натхненною. Дякую за цей досвід!',
+    rating: 5
   },
+  {
+    id: '7',
+    photo: './assets/img/reviews/7.jpg',
+    name: 'Наталія С.',
+    text: 'Неймовірна атмосфера, смачна їжа і чудові люди. Дуже хочу повернутися знову!',
+    rating: 4
+  },
+  {
+    id: '8',
+    photo: './assets/img/reviews/8.jpg',
+    name: 'Ірина М.',
+    text: 'Ретрит допоміг мені позбутися тривоги і почати цінувати кожен момент.',
+    rating: 5
+  },
+  {
+    id: '9',
+    photo: './assets/img/reviews/9.jpg',
+    name: 'Дарина Б.',
+    text: 'Вперше відчула справжній внутрішній спокій. Дякую за кожен день, проведений тут!',
+    rating: 5
+  },
+  {
+    id: '10',
+    photo: './assets/img/reviews/10.jpg',
+    name: 'Аліна Ф.',
+    text: 'Якби я знала, що ретрит дає такий ефект, я б приїхала набагато раніше!',
+    rating: 5
+  },
+  {
+    id: '11',
+    photo: './assets/img/reviews/11.jpg',
+    name: 'Євгенія О.',
+    text: 'Це було більше, ніж просто подорож. Це було повернення до себе.',
+    rating: 5
+  }
 ];

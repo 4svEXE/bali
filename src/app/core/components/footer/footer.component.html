@@ -2,7 +2,7 @@
   <div class="container">
     <div class="footer-content">
       <div class="footer-section">
-        <h4>Про ретрит</h4>
+        <h3>Про ретрит</h3>
         <p>
           Ексклюзивний ретрит для глибокого перезавантаження та відновлення
           енергії. Духовні практики, медитації, природа та комфорт.
@@ -10,7 +10,51 @@
       </div>
 
       <div class="footer-section">
-        <h4>Контакти</h4>
+        <h3>Організатори</h3>
+        <div class="organizers my-20">
+          <div class="organizer h-">
+            <img src="./assets/img/vh.jpg" alt="Вікторія Гонч" />
+            <h4>Вікторія Гонч</h4>
+            <app-marquee
+              [messages]="[
+                {
+                  text: 'ЕКСПЕРТКА З МАТРИЦІ ДОЛІ — ТЕТА ХІЛЕР — НУМЕРОЛОГ — ЕКСПЕРТ З ПСИХОСОМАТИКИ — АТМОЛОГ — АТМА ХІЛЕР',
+                  route: ''
+                }
+              ]"
+            />
+
+            <p class="mt-3">
+              Вікторія веде свій блог та власниця 3 успішних бізнесів. Проводить
+              трансформаційні ігри "Ліла" та "9 світів", Робить розстановки,
+              матриці долі, займається енергокоучінгом.
+            </p>
+          </div>
+
+          <hr class="my-10">
+
+          <div class="organizer h-  my-20">
+            <img src="./assets/img/k_har.PNG" alt="Катерина Харченко" />
+            <h4>Катерина Харченко</h4>
+            <app-marquee
+              [messages]="[
+                {
+                  text: 'ОРГАНІЗАТОР ТРАНСФОРМАЦІЙНИХ РЕТРИТІВ — ЙОГА-ТЕРАПЕВТКА — АСТРОПСИХОЛОГ — БРЕНД-СТРАТЕГ ТА МАРКЕТОЛОГ',
+                  route: ''
+                }
+              ]"
+            />
+
+            <p class="mt-3">
+              Організатор трансформаційних ретритів — Йога-терапевтка —
+              Астропсихолог — Бренд-стратег та маркетолог
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-section">
+        <h3>Контакти</h3>
         <ul>
           <li>
             <a href="mailto:info@retreat-bali.com">{{
@@ -23,7 +67,7 @@
       </div>
 
       <div class="footer-section">
-        <h4>Корисні посилання</h4>
+        <h3>Корисні посилання</h3>
         <ul>
           <li><a routerLink="/about">Про ретрит</a></li>
           <li><a routerLink="/program">Програма</a></li>
@@ -33,28 +77,32 @@
       </div>
 
       <div class="footer-section">
-        <h4>Організатори</h4>
-        <div class="organizers">
-          <div class="organizer">
-            <img src="/assets/images/organizer1.jpg" alt="Організатор 1" />
-            <p>Анна Світла<br />Експерт з духовних практик</p>
-          </div>
-          <div class="organizer">
-            <img src="/assets/images/organizer2.jpg" alt="Організатор 2" />
-            <p>Олександр Мирний<br />Сертифікований йога-інструктор</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="footer-section">
-        <h4>Ми у соцмережах</h4>
+        <h3>Ми у соцмережах</h3>
         <div class="social-icons">
           <a
             href="https://www.facebook.com"
             target="_blank"
             aria-label="Facebook"
           >
-          <svg fill="#fff" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" stroke="#fff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><title></title><path d="M44,7H20A13,13,0,0,0,7,20V44A13,13,0,0,0,20,57H44A13,13,0,0,0,57,44V20A13,13,0,0,0,44,7ZM33,55V38a1,1,0,0,0-1-1H27V31h5a1,1,0,0,0,1-1V22a5,5,0,0,1,5-5h8v6H42a3,3,0,0,0-3,3v4a1,1,0,0,0,1,1h6v6H40a1,1,0,0,0-1,1V55ZM55,44A11,11,0,0,1,44,55H41V39h6a1,1,0,0,0,1-1V30a1,1,0,0,0-1-1H41V26a1,1,0,0,1,1-1h5a1,1,0,0,0,1-1V16a1,1,0,0,0-1-1H38a7,7,0,0,0-7,7v7H26a1,1,0,0,0-1,1v8a1,1,0,0,0,1,1h5V55H20A11,11,0,0,1,9,44V20A11,11,0,0,1,20,9H44A11,11,0,0,1,55,20Z"></path></g></svg>
+            <svg
+              fill="#fff"
+              viewBox="0 0 64 64"
+              xmlns="http://www.w3.org/2000/svg"
+              stroke="#fff"
+            >
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g
+                id="SVGRepo_tracerCarrier"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></g>
+              <g id="SVGRepo_iconCarrier">
+                <title></title>
+                <path
+                  d="M44,7H20A13,13,0,0,0,7,20V44A13,13,0,0,0,20,57H44A13,13,0,0,0,57,44V20A13,13,0,0,0,44,7ZM33,55V38a1,1,0,0,0-1-1H27V31h5a1,1,0,0,0,1-1V22a5,5,0,0,1,5-5h8v6H42a3,3,0,0,0-3,3v4a1,1,0,0,0,1,1h6v6H40a1,1,0,0,0-1,1V55ZM55,44A11,11,0,0,1,44,55H41V39h6a1,1,0,0,0,1-1V30a1,1,0,0,0-1-1H41V26a1,1,0,0,1,1-1h5a1,1,0,0,0,1-1V16a1,1,0,0,0-1-1H38a7,7,0,0,0-7,7v7H26a1,1,0,0,0-1,1v8a1,1,0,0,0,1,1h5V55H20A11,11,0,0,1,9,44V20A11,11,0,0,1,20,9H44A11,11,0,0,1,55,20Z"
+                ></path>
+              </g>
+            </svg>
           </a>
           <a
             href="https://www.instagram.com"
@@ -131,7 +179,7 @@
     <div class="footer-bottom">
       <p>&copy; 2025 Retreat Bali. Всі права захищено.</p>
       <p>
-        <a routerLink="/privacy-policy">Політика конфіденційності</a> |
+        <a routerLink="/privacy-policy">Політика конфіденційності</a> <br/>
         <a routerLink="/terms">Умови використання</a>
       </p>
     </div>

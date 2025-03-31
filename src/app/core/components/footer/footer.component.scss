@@ -5,7 +5,26 @@
   padding-bottom: 80px;
   font-size: 14px;
 
-  svg{
+  .h-screen {
+    min-height: 50vh;
+  }
+  .organizer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  h3 {
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #0056b3;
+    text-align: center;
+  }
+
+  svg {
     width: 40px;
   }
 
@@ -23,7 +42,7 @@
 
     .footer-section {
       h4 {
-        font-size: 18px;
+        font-size: 24px;
         font-weight: 600;
         margin-bottom: 10px;
         color: #0056b3;

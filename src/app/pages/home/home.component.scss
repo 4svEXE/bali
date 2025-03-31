@@ -5,40 +5,83 @@
 .sky {
   background-color: #335183;
 }
-.z-4{
+
+.z-4 {
   z-index: 4;
 }
+
 .h-screen {
   height: 100vh;
 }
 
+.hotel {
+  color: #fff;
+  text-align: center;
 
+  h3 {
+    font-size: 24px;
+    text-align: center;
+  }
 
+  .swiperContainer {
+    height: 210px !important;
+    margin-top: 12px;
+  }
+
+  ul {
+    list-style-type: disc;
+    margin-left: 24px;
+    text-align-last: left;
+  }
+
+  .hotel-info {
+    font-size: 12px;
+  }
+}
+
+section {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
 
 .its-for-you {
   position: relative;
 
   .cloud {
     position: absolute;
-    max-width: 200%;
-    left: -50%;
-    bottom: -20%;
+    width: 600px;
+    max-width: fit-content;
+    left: 0;
+    bottom: -117px;
+  }
+
+  .cloud2 {
+    position: absolute;
+    width: 202%;
+    max-width: fit-content;
+    left: -46%;
+    bottom: -175px;
   }
 
   .tranding-slide {
-
     img,
     video {
-      height: 500px;
+      height: 460px;
+
+      border-radius: 12px;
+      border: 1px solid #335183;
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+     overflow: hidden;
     }
   }
 
-  .text{
+  .text {
     width: 290px;
-    height: 200px;
+    height: 120px;
+    padding: 8px;
     background-color: #000000c0;
     color: #fff;
-    transform: translateY(-200px);
+    transform: translateY(-190px);
 
     display: flex;
     align-items: center;
