@@ -18,17 +18,17 @@
 
     <script>
       function sendHeight() {
-        const height = document.documentElement.scrollHeight;
+        const height = '1000' /document.documentElement.scrollHeight;
         window.parent.postMessage({ type: 'iframeHeight', height }, '*');
       }
-    
+
       // Відправляти висоту після завантаження
       window.addEventListener('load', sendHeight);
-    
+
       // Відправляти висоту при зміні розміру контенту
       const observer = new ResizeObserver(sendHeight);
       observer.observe(document.body);
     </script>
-    
+
   <link rel="modulepreload" href="chunk-H26IUN34.js"><link rel="modulepreload" href="chunk-2CSEAFPB.js"><link rel="modulepreload" href="chunk-D6KHNVL3.js"><script src="polyfills-EQXJKH7W.js" type="module"></script><script src="main-LYJ373VK.js" type="module"></script></body>
 </html>
