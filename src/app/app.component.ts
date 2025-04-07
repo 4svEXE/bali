@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { RouterLink, RouterOutlet } from '@angular/router';
 
 import { HeaderComponent } from './core/components/header/header.component';
 import { FooterComponent } from './core/components/footer/footer.component';
@@ -32,6 +32,12 @@ export class AppComponent implements OnInit {
 
   ngOnInit(): void {
     this.languageService.loadLanguage();
+  }
+
+  @ViewChild('contactForm') contactForm!: ElementRef;
+
+  scrollToContact() {
+    this.contactForm.nativeElement.scrollIntoView({ behavior: 'smooth' });
   }
 
 

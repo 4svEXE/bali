@@ -1,4 +1,51 @@
-<div class="its-for-you container sand h-screen py-2">
+<div class="its-for-you container sand h-screen_ py-20">
+  <h2 class="mt-5 text-2xl font-bold text-center">
+    Як ми допомагаємо вам зекономити?
+  </h2>
+
+  <section class="py-10 grid gap-6 md:grid-cols-3">
+    <div
+      #animatedBlock
+      class="animated p-6 bg-white shadow-lg rounded-2xl transition transform"
+    >
+      <h3 class="text-xl font-semibold text-sky">Бронювання заздалегідь</h3>
+      <p class="mt-2 text-gray-700">
+        Ми резервуємо номери ще до початку гарячого сезону, коли ціни найнижчі.
+        Це дозволяє отримати вигідні умови без переплат.
+      </p>
+    </div>
+
+    <div
+      #animatedBlock
+      class="animated delay-1000 p-6 bg-white shadow-lg rounded-2xl transition transform"
+    >
+      <h3 class="text-xl font-semibold text-sky">Гуртові знижки</h3>
+      <p class="mt-2 text-gray-700">
+        Завдяки груповим замовленням ми отримуємо спеціальні знижки від
+        партнерських готелів. Ви платите менше — ми працюємо напряму.
+      </p>
+    </div>
+
+    <div
+      #animatedBlock
+      class="animated delay-2000 p-6 bg-white shadow-lg rounded-2xl transition transform"
+    >
+      <h3 class="text-xl font-semibold text-sky">
+        Оптимальне співвідношення ціни та якості
+      </h3>
+      <p class="mt-2 text-gray-700">
+        Ми обираємо лише перевірені готелі з хорошими відгуками, які пропонують
+        комфорт і адекватну вартість.
+      </p>
+    </div>
+  </section>
+
+  <a  (click)="scrollToContact()" class="button-primary mt-5">
+    <div class="flex">Забронювати</div>
+  </a>
+</div>
+
+<div class="its-for-you container sand h-screen_ py-20">
   <h2 class="mt-5">Це для тебе якщо:</h2>
   <section class="py-10">
     <swiper-container
@@ -28,7 +75,7 @@
   <img src="./assets/img/cloud.png" class="cloud2" />
 </div>
 
-<div class="whats-be container sky pb-40 pt-40">
+<div class="whats-be container sky pb-40 py-20 h-screen_">
   <h2>Програма ретриту:</h2>
   <div class="flex flex-col gap-1">
     <div *ngFor="let day of days" class="accordion-item border rounded-lg">
@@ -45,9 +92,13 @@
       </div>
     </div>
   </div>
+
+  <a  (click)="scrollToContact()" class="button-primary mt-5">
+    <div>Хочу з вами!</div>
+  </a>
 </div>
 
-<section class="py-16 px-4 sky">
+<section class="py-20 px-4 sky h-screen_">
   <div class="max-w-6xl mx-auto text-center">
     <h2 class="text-3xl md:text-4xl font-bold text-sky mb-10">
       Що на тебе чекає?
@@ -93,9 +144,13 @@
       </div>
     </div>
   </div>
+
+  <a  (click)="scrollToContact()" class="button-primary mt-5">
+    <div>Я бронюю!</div>
+  </a>
 </section>
 
-<!-- <div class="retryt-program container sky h-screen pb-2 pt-10">
+<!-- <div class="retryt-program container sky h-screen_ pb-2 pt-10">
   <h2 class="block relative z-4 m-auto">Що тебе чекає:</h2>
 
   <img src="./assets/img/sky-gradient.png" class="sky-gradient z-1" />
@@ -135,7 +190,7 @@
 </div> -->
 
 <div
-  class="its-for-you hotel container sky py-6 flex flex-col items-center justify-center"
+  class="its-for-you hotel container sky py-20 flex flex-col items-center justify-center h-screen_"
 >
   <h2>Де будемо жити:</h2>
 
@@ -183,10 +238,15 @@
       </p>
     </div>
   </div>
+
+  <a  (click)="scrollToContact()" class="button-primary mt-5">
+    <div>Забронювати</div>
+  </a>
+
   <img src="./assets/img/cloud.png" class="cloud" />
 </div>
 
-<div class="whats-be container sky pb-2 pt-40 py-6">
+<div class="whats-be container h-screen_ sky pb-2 pt-40 py-6">
   <h2>Часті питання:</h2>
   <div class="flex flex-col gap-1">
     <div *ngFor="let day of faq" class="accordion-item border rounded-lg">
@@ -206,7 +266,7 @@
 </div>
 
 <div
-  class="whats-included container sand py-32"
+  class="whats-included container h-screen_ sand py-20"
   style="
     background-image: url('assets/img/bg2.png');
     background-repeat: no-repeat;
@@ -217,52 +277,103 @@
     Що входить у вартість?
   </h2>
   <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2">
-    <div class="p-6 bg-white shadow-lg rounded-2xl transition transform">
+    <div
+      #animatedBlock
+      class="animated p-6 bg-white shadow-lg rounded-2xl transition transform"
+    >
       <h3 class="text-xl font-semibold text-sky">Проживання</h3>
       <p class="mt-2 text-gray-700">
         Комфортні номери в готелі з усіма зручностями.
       </p>
     </div>
-    <div class="p-6 bg-white shadow-lg rounded-2xl transition transform">
+    <div
+      #animatedBlock
+      class="animated delay-1000 p-6 bg-white shadow-lg rounded-2xl transition transform"
+    >
       <h3 class="text-xl font-semibold text-sky">Харчування</h3>
       <p class="mt-2 text-gray-700">Смачні та корисні сніданки.</p>
     </div>
-    <div class="p-6 bg-white shadow-lg rounded-2xl transition transform">
+    <div
+      #animatedBlock
+      class="animated delay-2000 p-6 bg-white shadow-lg rounded-2xl transition transform"
+    >
       <h3 class="text-xl font-semibold text-sky">Трансфер</h3>
       <p class="mt-2 text-gray-700">
         Зустріч в аеропорту та перевезення до готелю.
       </p>
     </div>
-    <div class="p-6 bg-white shadow-lg rounded-2xl transition transform">
+    <div
+      #animatedBlock
+      class="animated delay-3000 p-6 bg-white shadow-lg rounded-2xl transition transform"
+    >
       <h3 class="text-xl font-semibold text-sky">Екскурсії</h3>
       <p class="mt-2 text-gray-700">
         Відвідування мальовничих місць та культурних пам’яток.
       </p>
     </div>
-    <div class="p-6 bg-white shadow-lg rounded-2xl transition transform">
+    <div
+      #animatedBlock
+      class="animated delay-4000 p-6 bg-white shadow-lg rounded-2xl transition transform"
+    >
       <h3 class="text-xl font-semibold text-sky">Практики та тренінги</h3>
       <p class="mt-2 text-gray-700">
         Йога, медитації, психологічні сесії та групові зустрічі.
       </p>
     </div>
-    <div class="p-6 bg-white shadow-lg rounded-2xl transition transform">
+    <div
+      #animatedBlock
+      class="animated delay-5000 p-6 bg-white shadow-lg rounded-2xl transition transform"
+    >
       <h3 class="text-xl font-semibold text-sky">Фото- та відеозйомка</h3>
       <p class="mt-2 text-gray-700">
         Професійні фото та відео на пам’ять про подорож.
       </p>
     </div>
   </div>
+
+  <a  (click)="scrollToContact()" class="button-primary mt-5">
+    <div>Хочу з вами!</div>
+  </a>
 </div>
 
-<div class="retreat-pricing container sand py-16">
+<div class="retreat-pricing container h-screen_ sand py-20">
   <h2 class="text-3xl md:text-4xl font-bold text-sky text-center mb-10">
     Вартість ретриту
   </h2>
+  <div class="mt-4 bg-white p-6 rounded-2xl shadow-lg text-center my-5">
+    <p class="text-gray-700 text-lg mb-3">
+      Забронюй заздалегідь та зеконом до <span class="font-semibold text-2xl text-emerald-600">500$</span>
+    </p>
+
+    <p class="text-xl text-gray-500 line-through">
+      2550$
+    </p>
+    <p class="text-3xl font-bold text-red-600 mb-2">
+      2050$ <span class="text-base font-medium text-gray-500">(до 1 травня)</span>
+    </p>
+
+    <p class="text-gray-700 mt-4">
+      Перший внесок — <span class="font-semibold">500$</span>
+    </p>
+    <p class="text-gray-700">
+      Решту можна сплачувати щомісяця до виїзду
+    </p>
+  </div>
+
+
   <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2">
     <div class="p-6 bg-white shadow-lg rounded-2xl transition transform">
       <h3 class="text-xl font-semibold text-sky">Ціна за 11 днів</h3>
-      <p class="mt-2 text-gray-700">2550$</p>
-      <b>2050$ за умови раннього бронювання (до 1 травня)</b>
+      <div class=" text-center_">
+        <p class="text-xl text-gray-500 line-through">
+          2550$
+        </p>
+        <p class="text-2xl font-bold text-emerald-600">
+          2050$ <span class="text-base font-medium text-gray-500">(при бронюванні до 1 травня)</span>
+        </p>
+      </div>
+
+
     </div>
     <div class="p-6 bg-white shadow-lg rounded-2xl transition transform">
       <h3 class="text-xl font-semibold text-sky">Аванс</h3>
@@ -326,9 +437,13 @@
       </div>
     </div>
   </div>
+
+  <a  (click)="scrollToContact()" class="button-primary mt-5">
+    <div>Бронюю!</div>
+  </a>
 </div>
 
-<div id="contact-form" class="flex justify-center items-center h-screen sky">
+<div #contactForm id="contact-form" class="flex justify-center items-center h-screen_ sky">
   <app-contact-form />
 </div>
 

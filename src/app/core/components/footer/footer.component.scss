@@ -5,9 +5,6 @@
   padding-bottom: 80px;
   font-size: 14px;
 
-  .h-screen {
-    min-height: 50vh;
-  }
   .organizer{
     display: flex;
     flex-direction: column;
@@ -70,16 +67,22 @@
       .social-icons {
         display: flex;
         gap: 10px;
+        padding: 4px 8px;
+
+        background-color: #fff;
+        border-radius: 8px;
 
         a {
           color: #0056b3;
           font-size: 20px;
           transition: transform 0.3s, color 0.3s;
+// padding: 5px;
 
           &:hover {
-            transform: scale(1.1);
+            // transform: scale(1.1);
             color: #fff;
           }
+
         }
       }
     }

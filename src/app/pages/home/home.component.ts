@@ -1,4 +1,4 @@
-import { Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { Component, AfterViewInit, ElementRef, ViewChildren, QueryList, CUSTOM_ELEMENTS_SCHEMA, ViewChild } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
 import { ReviewsComponent } from './reviews/reviews.component';
 import { CommonModule } from '@angular/common';
@@ -14,11 +14,11 @@ import { ContactFormComponent } from "../../shared/components/contact-form/conta
     TranslateModule,
     CommonModule,
     ReviewsComponent,
-    ContactFormComponent,
+    ContactFormComponent
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
-export class HomeComponent {
+export class HomeComponent implements AfterViewInit {
   videoLoaded = false;
 
   swiperConfig = {
@@ -43,6 +43,31 @@ export class HomeComponent {
   }
 
 
+  @ViewChild('contactForm') contactForm!: ElementRef;
+
+  scrollToContact() {
+    this.contactForm.nativeElement.scrollIntoView({ behavior: 'smooth' });
+  }
+
+
+  // scroll
+  @ViewChildren('animatedBlock') blocks!: QueryList<ElementRef>;
+
+  ngAfterViewInit() {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry, i) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => {
+            entry.target.classList.add('slide-in-blurred-left');
+          }, 1000 * i);
+        }
+      });
+    }, { threshold: 0.2 });
+
+    this.blocks.forEach(block => observer.observe(block.nativeElement));
+  }
+
+
   slides = [
     { text: 'Відчуваєш постійний стрес від роботи і потребуєш відновлення', img: './assets/img/its-for-you/5.png' },
     { text: 'Ти працюєш з іншими людьми і потребуєш глибокого перезавантаження', img: './assets/img/its-for-you/2.png' },
@@ -51,7 +76,7 @@ export class HomeComponent {
     { text: 'Ти потребуєш особистого простору та часу для відновлення', video: './assets/img/its-for-you/1.mp4' },
     { text: 'Ти прагнеш до глибокої трансформації та розвитку', img: './assets/img/its-for-you/6.png' },
     { text: 'Шукаєш спосіб з\'єднатися з природою та повернути гармонію в своєму житті', img: './assets/img/its-for-you/7.png' },
-    { text: 'Шукаєш можливість розширити своє коло знайомств з однодумцями', img: './assets/img/its-for-you/8.png' }
+    { text: 'Шукаєш можливість розширити своє коло знайомств з однодумцями', img: './assets/img/its-for-you/4.png' }
   ];
 
   faq = [
